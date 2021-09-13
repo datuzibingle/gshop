@@ -8,10 +8,16 @@
 
 import Vue from "vue"
 import App from "./App.vue"
+import {Button} from 'mint-ui'
 import router from "./router/index.js"
+import store from './store'
+import './mock/mockServer'
+
+Vue.component(Button.name,Button)
 
 new Vue({
   el:"#app",
   render: h => h(App),
-  router
+  router,  //使用vue-router
+  store,   //使用vuex
 })
